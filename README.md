@@ -41,3 +41,7 @@ npm start
 ```
 
 An HTTP server will now be running from your Raspberry Pi. Go to your Pi's IP address with port 5000 to access the web quadcopter controls.
+
+## Test Video
+
+TODO add a link or embed to the first test video here
