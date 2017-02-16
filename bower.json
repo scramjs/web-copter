@@ -17,7 +17,7 @@
   "dependencies": {
     "polymer": "^1.8.0",
     "express-web-components": "^0.4.2",
-    "jfive-web-components": "^0.0.7",
-    "iron-ajax": "^1.4.3"
+    "iron-ajax": "^1.4.3",
+    "jfive-web-components": "^0.0.8"
   }
 }

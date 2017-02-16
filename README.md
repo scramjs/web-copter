@@ -23,6 +23,7 @@ git clone https://github.com/scramjs/web-copter.git
 cd web-copter
 bower install
 npm install
+npm run rebuild
 ```
 
 Don't worry, Bower will be going away soon. I'm just waiting on Polymer to officially support NPM.
@@ -31,6 +32,7 @@ Don't worry, Bower will be going away soon. I'm just waiting on Polymer to offic
 
 From your Raspberry Pi, from the `web-copter` directory:
 ```
+sudo su
 npm start
 ```
 

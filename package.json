@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "A quadcopter controlled with custom elements and JavaScript.",
   "scripts": {
-    "start": "xvfb-run electron node_modules/scram-engine/main.js --entry-file src/index.html"
+    "start": "xvfb-run electron node_modules/scram-engine/main.js --entry-file src/device/index.html",
+    "rebuild": "electron-rebuild"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,12 @@
   },
   "homepage": "https://github.com/scramjs/web-copter#readme",
   "dependencies": {
+    "express": "^4.14.1",
+    "johnny-five": "^0.10.6",
+    "raspi-io": "^7.2.3",
     "scram-engine": "^0.4.5"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.7"
   }
 }
