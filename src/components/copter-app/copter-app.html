@@ -1,0 +1,103 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<link rel="import" href="bower_components/express-web-components/express-app.html">
+<link rel="import" href="bower_components/express-web-components/express-middleware.html">
+<link rel="import" href="bower_components/express-web-components/express-config.html">
+
+<link rel="import" href="bower_components/jfive-web-components/jfive-motor.html">
+
+<dom-module id="copter-app.html">
+    <template>
+        <jfive-motor on="[[motorOn1]]" speed="[[speed1]]" reverse="[[reverse1]]" pwm-pin="GPIO12" dir-pin="GPIO23" cdir-pin="GPIO24"></jfive-motor>
+		<jfive-motor on="[[motorOn2]]" speed="[[speed2]]" reverse="[[reverse2]]" pwm-pin="GPIO18" dir-pin="GPIO20" cdir-pin="GPIO21"></jfive-motor>
+		<jfive-motor on="[[motorOn3]]" speed="[[speed3]]" reverse="[[reverse3]]" pwm-pin="GPIO13" dir-pin="GPIO27" cdir-pin="GPIO22"></jfive-motor>
+		<jfive-motor on="[[motorOn4]]" speed="[[speed4]]" reverse="[[reverse4]]" pwm-pin="GPIO19" dir-pin="GPIO6" cdir-pin="GPIO5"></jfive-motor>
+
+        <express-app port="5000">
+            <express-config callback="[[staticMW]]"></express-config>
+            <express-middleware method="get" path="/" callback="[[root]]"></express-middleware>
+            <express-middleware method="post" path="/motor-on/:motorId" callback="[[motorOnHandler]]"></express-middleware>
+            <express-middleware method="post" path="/motor-off/:motorId" callback="[[motorOffHandler]]"></express-middleware>
+            <express-middleware method="post" path="/motor-increase-speed/:motorId" callback="[[motorIncreaseSpeedHandler]]"></express-middleware>
+            <express-middleware method="post" path="/motor-decrease-speed/:motorId" callback="[[motorDecreaseSpeedHandler]]"></express-middleware>
+            <express-middleware method="post" path="/motor-reverse/:motorId" callback="[[motorReverseHandler]]"></express-middleware>
+        </express-app>
+    </template>
+
+    <script>
+        class CopterApp {
+            beforeRegister() {
+                this.is = 'copter-app';
+            }
+
+            ready() {
+                this.motorOnHandler = (req, res) => {
+                    const motorId = req.params.motorId;
+                    if (motorId) {
+                        this[`motorOn${motorId}`] = true;
+                    }
+                    else {
+                        this.motorOn1 = true;
+                        this.motorOn2 = true;
+                        this.motorOn3 = true;
+                        this.motorOn4 = true;
+                    }
+                };
+
+                this.motorOffHandler = (req, res) => {
+                    const motorId = req.params.motorId;
+                    if (motorId) {
+                        this[`motorOn${motorId}`] = false;
+                    }
+                    else {
+                        this.motorOn1 = false;
+                        this.motorOn2 = false;
+                        this.motorOn3 = false;
+                        this.motorOn4 = false;
+                    }
+                };
+
+                this.motorIncreaseSpeedHandler = (req, res) => {
+                    const motorId = req.params.motorId;
+                    if (motorId) {
+                        this[`speed${motorId}`] += 50;
+                    }
+                    else {
+                        this.speed1 += 50;
+                        this.speed2 += 50;
+                        this.speed3 += 50;
+                        this.speed4 += 50;
+                    }
+                };
+
+                this.motorDecreaseSpeedHandler = (req, res) => {
+                    const motorId = req.params.motorId;
+                    if (motorId) {
+                        this[`speed${motorId}`] -= 50;
+                    }
+                    else {
+                        this.speed1 -= 50;
+                        this.speed2 -= 50;
+                        this.speed3 -= 50;
+                        this.speed4 -= 50;
+                    }
+                };
+
+                this.motorReverseHandler = (req, res) => {
+                    const motorId = req.params.motorId;
+                    if (motorId) {
+                        this[`reverse${motorId}`] = !this[`reverse${motorId}`];
+                    }
+                    else {
+                        this.reverse1 = !this.reverse1;
+                        this.reverse2 = !this.reverse2;
+                        this.reverse3 = !this.reverse3;
+                        this.reverse4 = !this.reverse4;
+                    }
+                };
+            }
+        }
+
+        Polymer(CopterApp);
+    </script>
+</dom-module>

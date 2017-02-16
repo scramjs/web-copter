@@ -1,0 +1,21 @@
+{
+  "name": "web-copter",
+  "version": "0.0.0",
+  "description": "A quadcopter controlled with custom elements and JavaScript.",
+  "scripts": {
+    "start": "xvfb-run electron node_modules/scram-engine/main.js --entry-file src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scramjs/web-copter.git"
+  },
+  "author": "Jordan Last <jordan.michael.last@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scramjs/web-copter/issues"
+  },
+  "homepage": "https://github.com/scramjs/web-copter#readme",
+  "dependencies": {
+    "scram-engine": "^0.4.5"
+  }
+}
