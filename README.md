@@ -44,4 +44,4 @@ An HTTP server will now be running from your Raspberry Pi. Go to your Pi's IP ad
 
 ## Test Video
 
-TODO add a link or embed to the first test video here
+See the first test here: https://photos.google.com/photo/AF1QipNkuE2N1x8sSIsJYDo6lxftHRaoOVssxABdxb6c
