@@ -5,40 +5,61 @@
     <template>
         <iron-ajax auto method="post" url="[[urlCommand]]"></iron-ajax>
 
-        <div>All Motors</div>
-		<button on-click="motorOnClick">On</button>
-        <button on-click="motorOffClick">Off</button>
-        <button on-click="motorIncreaseSpeedClick">Speed Up</button>
-        <button on-click="motorDecreaseSpeedClick">Speed Down</button>
-        <button on-click="motorReverseClick">Reverse</button>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="display: flex; flex-direction: column">
+                <div>All Motors</div>
+        		<button on-click="motorOnClick">On</button>
+                <button on-click="motorOffClick">Off</button>
+                <button on-click="motorIncreaseSpeedClick">Speed Up</button>
+                <button on-click="motorDecreaseSpeedClick">Speed Down</button>
+                <button on-click="motorReverseClick">Reverse</button>
+            </div>
+        </div>
 
-        <div>Motor 1</div>
-        <button on-click="motorOnClick" data-motor-id="1">On</button>
-        <button on-click="motorOffClick" data-motor-id="1">Off</button>
-        <button on-click="motorIncreaseSpeedClick" data-motor-id="1">Speed Up</button>
-        <button on-click="motorDecreaseSpeedClick" data-motor-id="1">Speed Down</button>
-        <button on-click="motorReverseClick" data-motor-id="1">Reverse</button>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="display: flex; flex-direction: column">
+                <div>Motor 1</div>
+                <button on-click="motorOnClick" data-motor-id="1">On</button>
+                <button on-click="motorOffClick" data-motor-id="1">Off</button>
+                <button on-click="motorIncreaseSpeedClick" data-motor-id="1">Speed Up</button>
+                <button on-click="motorDecreaseSpeedClick" data-motor-id="1">Speed Down</button>
+                <button on-click="motorReverseClick" data-motor-id="1">Reverse</button>
+            </div>
+        </div>
 
-        <div>Motor 2</div>
-        <button on-click="motorOnClick" data-motor-id="2">On</button>
-        <button on-click="motorOffClick" data-motor-id="2">Off</button>
-        <button on-click="motorIncreaseSpeedClick" data-motor-id="2">Speed Up</button>
-        <button on-click="motorDecreaseSpeedClick" data-motor-id="2">Speed Down</button>
-        <button on-click="motorReverseClick" data-motor-id="2">Reverse</button>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="display: flex; flex-direction: column">
+                <div>Motor 2</div>
+                <button on-click="motorOnClick" data-motor-id="2">On</button>
+                <button on-click="motorOffClick" data-motor-id="2">Off</button>
+                <button on-click="motorIncreaseSpeedClick" data-motor-id="2">Speed Up</button>
+                <button on-click="motorDecreaseSpeedClick" data-motor-id="2">Speed Down</button>
+                <button on-click="motorReverseClick" data-motor-id="2">Reverse</button>
+            </div>
+        </div>
 
-        <div>Motor 3</div>
-        <button on-click="motorOnClick" data-motor-id="3">On</button>
-        <button on-click="motorOffClick" data-motor-id="3">Off</button>
-        <button on-click="motorIncreaseSpeedClick" data-motor-id="3">Speed Up</button>
-        <button on-click="motorDecreaseSpeedClick" data-motor-id="3">Speed Down</button>
-        <button on-click="motorReverseClick" data-motor-id="3">Reverse</button>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="display: flex; flex-direction: column">
+                <div>Motor 3</div>
+                <button on-click="motorOnClick" data-motor-id="3">On</button>
+                <button on-click="motorOffClick" data-motor-id="3">Off</button>
+                <button on-click="motorIncreaseSpeedClick" data-motor-id="3">Speed Up</button>
+                <button on-click="motorDecreaseSpeedClick" data-motor-id="3">Speed Down</button>
+                <button on-click="motorReverseClick" data-motor-id="3">Reverse</button>
+            </div>
+        </div>
 
-        <div>Motor 4</div>
-        <button on-click="motorOnClick" data-motor-id="4">On</button>
-        <button on-click="motorOffClick" data-motor-id="4">Off</button>
-        <button on-click="motorIncreaseSpeedClick" data-motor-id="4">Speed Up</button>
-        <button on-click="motorDecreaseSpeedClick" data-motor-id="4">Speed Down</button>
-        <button on-click="motorReverseClick" data-motor-id="4">Reverse</button>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="display: flex; flex-direction: column">
+                <div>Motor 4</div>
+                <button on-click="motorOnClick" data-motor-id="4">On</button>
+                <button on-click="motorOffClick" data-motor-id="4">Off</button>
+                <button on-click="motorIncreaseSpeedClick" data-motor-id="4">Speed Up</button>
+                <button on-click="motorDecreaseSpeedClick" data-motor-id="4">Speed Down</button>
+                <button on-click="motorReverseClick" data-motor-id="4">Reverse</button>
+            </div>
+        </div>
+
     </template>
 
     <script>
