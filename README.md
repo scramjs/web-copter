@@ -8,7 +8,7 @@ to build a hardware application. The quadcopter is very rudimentary and a work i
 
 Web components let you build applications declaratively, which can make them easier to understand, grow, and maintain. Here is some of the main HTML source code of the quadcopter:
 
-```
+```HTML
 <jfive-motor on="[[motorOn1]]" speed="[[speed1]]" reverse="[[reverse1]]" pwm-pin="GPIO12" dir-pin="GPIO23" cdir-pin="GPIO24"></jfive-motor>
 <jfive-motor on="[[motorOn2]]" speed="[[speed2]]" reverse="[[reverse2]]" pwm-pin="GPIO18" dir-pin="GPIO20" cdir-pin="GPIO21"></jfive-motor>
 <jfive-motor on="[[motorOn3]]" speed="[[speed3]]" reverse="[[reverse3]]" pwm-pin="GPIO13" dir-pin="GPIO27" cdir-pin="GPIO22"></jfive-motor>
