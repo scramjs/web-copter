@@ -42,6 +42,12 @@ npm start
 
 An HTTP server will now be running from your Raspberry Pi. Go to your Pi's IP address with port 5000 to access the web quadcopter controls.
 
+## Hardware
+
+This section is a major work in progress. First you need to understand how the Raspberry PI pins work. You need to use PWM pins to control the speed of the motors. Here is a good schematic for the Raspberry PI 3: http://blog.mcmelectronics.com/post/Raspberry-Pi-3-GPIO-Pin-Layout#.WbDN5HWGP0p
+
+To get four motors working with direction/polarity, you'll need to use motor controllers. This project uses two LC239D integrated circuits. They are 3-pin h-bridges, two per circuit. Having two of them allows you to control four motors. Just hook up everything correctly, following the LC239D's pin layout here: http://www.rakeshmondal.info/L293D-Motor-Driver It isn't that difficult once you understand the basics.
+
 ## Test Video
 
 See the first test here: https://www.youtube.com/watch?v=Z87Q9AO3OWg
